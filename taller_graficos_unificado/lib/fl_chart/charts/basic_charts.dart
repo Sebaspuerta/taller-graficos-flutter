@@ -36,7 +36,7 @@ Widget _bars(
       minY: 0,
       alignment: BarChartAlignment.spaceAround,
       barTouchData: const BarTouchData(enabled: false),
-      gridData: horizontalGrid,
+      gridData: horizontalGrid(maxY),
       borderData: simpleBorder,
       titlesData: basicTitles(
         bottom: categoryTitles(labels, name: xName, angle: labelAngle, reserved: labelReserved),
@@ -102,7 +102,7 @@ Widget _line(
       minY: 0,
       maxY: maxY,
       lineTouchData: const LineTouchData(enabled: false),
-      gridData: horizontalGrid,
+      gridData: horizontalGrid(maxY),
       borderData: simpleBorder,
       titlesData: basicTitles(bottom: idTitles(cs.length), left: valueTitles(maxY, name: 'Episodios')),
       lineBarsData: [
@@ -268,7 +268,7 @@ final List<FlChartDef> basicCharts = [
           BarChartData(
             maxY: maxY,
             barTouchData: const BarTouchData(enabled: false),
-            gridData: horizontalGrid,
+            gridData: horizontalGrid(maxY),
             borderData: simpleBorder,
             titlesData: basicTitles(
               bottom: categoryTitles(statuses, name: 'Estado'),

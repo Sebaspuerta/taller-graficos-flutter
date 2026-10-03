@@ -26,8 +26,8 @@ class FlCharacter {
 
   /// Nombre corto para etiquetas de ejes ("Rick Sanchez" -> "Rick S.").
   String get shortName {
-    final parts = name.split(' ');
-    if (parts.length == 1) return name;
+    final parts = name.split(' ').where((p) => p.isNotEmpty).toList();
+    if (parts.length <= 1) return name.trim();
     return '${parts.first} ${parts[1][0]}.';
   }
 

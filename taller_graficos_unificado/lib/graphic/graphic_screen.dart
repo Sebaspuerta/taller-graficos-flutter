@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:graphic/graphic.dart';
-import 'char_data_placeholder.dart'; // TEMPORAL — ver README
+import 'char_data.dart';
 
 class GraphicHomeScreen extends StatelessWidget {
   const GraphicHomeScreen({super.key});
@@ -321,7 +321,7 @@ Widget _card(String code, String title, Widget chart) => Builder(
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: Colors.grey.shade300), boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))],
+        border: Border.all(color: Colors.grey.shade300), boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

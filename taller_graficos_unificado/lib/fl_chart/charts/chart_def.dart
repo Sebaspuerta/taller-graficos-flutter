@@ -143,7 +143,10 @@ FlBorderData get simpleBorder => FlBorderData(
       ),
     );
 
-const FlGridData horizontalGrid = FlGridData(show: true, drawVerticalLine: false);
+/// Cuadrícula horizontal con el mismo intervalo que las etiquetas de
+/// [valueTitles] para ese [max], así cada línea coincide con un número.
+FlGridData horizontalGrid(double max) =>
+    FlGridData(drawVerticalLine: false, horizontalInterval: niceInterval(max));
 
 /// Mensaje que reemplaza a la gráfica cuando un filtro deja 0 datos.
 Widget emptyChart(String message) => Center(

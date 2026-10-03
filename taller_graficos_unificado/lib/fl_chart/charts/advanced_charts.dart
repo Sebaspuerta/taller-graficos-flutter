@@ -67,7 +67,7 @@ LineChartData _idLineData(
     maxY: top,
     lineTouchData: touch ?? const LineTouchData(enabled: false),
     extraLinesData: extraLines,
-    gridData: horizontalGrid,
+    gridData: horizontalGrid(top),
     borderData: simpleBorder,
     titlesData: basicTitles(bottom: idTitles(cs.length), left: valueTitles(top, name: 'Episodios')),
     lineBarsData: bars,
@@ -86,7 +86,7 @@ BarChartData _plainBars(List<num> values, AxisTitles bottom, Color color, String
   return BarChartData(
     maxY: maxY,
     barTouchData: const BarTouchData(enabled: false),
-    gridData: horizontalGrid,
+    gridData: horizontalGrid(maxY),
     borderData: simpleBorder,
     titlesData: basicTitles(bottom: bottom, left: valueTitles(maxY, name: yName)),
     barGroups: [
@@ -246,7 +246,7 @@ final List<FlChartDef> advancedCharts = [
           BarChartData(
             maxY: maxY,
             barTouchData: const BarTouchData(enabled: false),
-            gridData: horizontalGrid,
+            gridData: horizontalGrid(maxY),
             borderData: simpleBorder,
             titlesData: basicTitles(
               bottom: categoryTitles(statuses, name: 'Estado'),
@@ -285,7 +285,7 @@ final List<FlChartDef> advancedCharts = [
             rotationQuarterTurns: 1,
             maxY: maxY,
             barTouchData: const BarTouchData(enabled: false),
-            gridData: horizontalGrid,
+            gridData: horizontalGrid(maxY),
             borderData: simpleBorder,
             titlesData: basicTitles(
               bottom: categoryTitles(genders, reserved: 72),
@@ -319,7 +319,7 @@ final List<FlChartDef> advancedCharts = [
           BarChartData(
             maxY: 100,
             barTouchData: const BarTouchData(enabled: false),
-            gridData: horizontalGrid,
+            gridData: const FlGridData(drawVerticalLine: false, horizontalInterval: 25),
             borderData: simpleBorder,
             titlesData: basicTitles(
               bottom: categoryTitles(species, name: 'Especie'),
@@ -369,7 +369,7 @@ final List<FlChartDef> advancedCharts = [
       return BarChart(
         BarChartData(
           maxY: maxY,
-          gridData: horizontalGrid,
+          gridData: horizontalGrid(maxY),
           borderData: simpleBorder,
           titlesData: basicTitles(bottom: _nameTitles(cs), left: valueTitles(maxY, name: 'Episodios')),
           barTouchData: BarTouchData(
@@ -408,7 +408,7 @@ final List<FlChartDef> advancedCharts = [
         BarChartData(
           maxY: maxY,
           barTouchData: const BarTouchData(enabled: false),
-          gridData: horizontalGrid,
+          gridData: horizontalGrid(maxY),
           borderData: simpleBorder,
           titlesData: basicTitles(
             bottom: categoryTitles(statuses, name: 'Estado'),
@@ -573,7 +573,7 @@ final List<FlChartDef> advancedCharts = [
             minY: 0,
             maxY: maxY,
             lineTouchData: const LineTouchData(enabled: false),
-            gridData: horizontalGrid,
+            gridData: horizontalGrid(maxY),
             borderData: simpleBorder,
             titlesData: basicTitles(
               bottom: categoryTitles(_seasonLabels(d), name: 'Temporada'),
@@ -616,7 +616,7 @@ final List<FlChartDef> advancedCharts = [
             minY: 0,
             maxY: maxY,
             lineTouchData: const LineTouchData(enabled: false),
-            gridData: horizontalGrid,
+            gridData: horizontalGrid(maxY),
             borderData: simpleBorder,
             titlesData: basicTitles(
               bottom: categoryTitles(_seasonLabels(d), name: 'Temporada'),
@@ -648,7 +648,7 @@ final List<FlChartDef> advancedCharts = [
           minY: 0,
           maxY: maxY,
           lineTouchData: const LineTouchData(enabled: false),
-          gridData: horizontalGrid,
+          gridData: horizontalGrid(maxY),
           borderData: simpleBorder,
           titlesData: basicTitles(bottom: idTitles(cs.length), left: valueTitles(maxY, name: 'Temporadas')),
           lineBarsData: [
@@ -851,7 +851,7 @@ final List<FlChartDef> advancedCharts = [
           maxY: limit,
           minY: -limit,
           barTouchData: const BarTouchData(enabled: false),
-          gridData: horizontalGrid,
+          gridData: horizontalGrid(limit),
           borderData: simpleBorder,
           extraLinesData: ExtraLinesData(horizontalLines: [HorizontalLine(y: 0, color: Colors.black54, strokeWidth: 1)]),
           titlesData: basicTitles(bottom: _nameTitles(cs), left: valueTitles(limit, name: 'Diferencia')),
@@ -946,7 +946,7 @@ final List<FlChartDef> advancedCharts = [
         BarChartData(
           maxY: maxY,
           barTouchData: const BarTouchData(enabled: false),
-          gridData: horizontalGrid,
+          gridData: horizontalGrid(maxY),
           borderData: simpleBorder,
           titlesData: basicTitles(
             bottom: categoryTitles(_seasonLabels(d), name: 'Temporada'),
@@ -991,7 +991,7 @@ final List<FlChartDef> advancedCharts = [
           minY: 0,
           maxY: maxY,
           lineTouchData: const LineTouchData(enabled: false),
-          gridData: horizontalGrid,
+          gridData: horizontalGrid(maxY),
           borderData: simpleBorder,
           rangeAnnotations: RangeAnnotations(verticalRangeAnnotations: [
             for (var i = 0; i < seasons.length; i++)
@@ -1135,7 +1135,7 @@ final List<FlChartDef> advancedCharts = [
                 minY: 0,
                 alignment: BarChartAlignment.spaceAround,
                 barTouchData: const BarTouchData(enabled: false),
-                gridData: horizontalGrid,
+                gridData: horizontalGrid(maxY),
                 borderData: simpleBorder,
                 titlesData: titles,
                 barGroups: [
@@ -1287,7 +1287,7 @@ class _AnimatedFilterBarsState extends State<_AnimatedFilterBars> {
             BarChartData(
               maxY: maxY,
               barTouchData: const BarTouchData(enabled: false),
-              gridData: horizontalGrid,
+              gridData: horizontalGrid(maxY),
               borderData: simpleBorder,
               titlesData: basicTitles(
                 bottom: categoryTitles([for (final c in cs) '${c.id}'], name: 'ID', every: 2),

@@ -37,7 +37,7 @@ class LineChartAdvanced extends StatelessWidget {
           zoomPanBehavior: _zoom(),
           series: <CartesianSeries>[
             LineSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
@@ -45,7 +45,7 @@ class LineChartAdvanced extends StatelessWidget {
               dataLabelSettings: const DataLabelSettings(isVisible: true),
             ),
             LineSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -69,14 +69,14 @@ class SplineChartAdvanced extends StatelessWidget {
           trackballBehavior: _trackball(),
           series: <CartesianSeries>[
             SplineSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
               dataLabelSettings: const DataLabelSettings(isVisible: true),
             ),
             SplineSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -99,7 +99,7 @@ class ColumnChartAdvanced extends StatelessWidget {
           selectionType: SelectionType.point,
           series: <CartesianSeries>[
             ColumnSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
@@ -107,7 +107,7 @@ class ColumnChartAdvanced extends StatelessWidget {
               selectionBehavior: SelectionBehavior(enable: true),
             ),
             ColumnSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -129,14 +129,14 @@ class BarChartAdvanced extends StatelessWidget {
           tooltipBehavior: _tooltip(),
           series: <CartesianSeries>[
             BarSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
               dataLabelSettings: const DataLabelSettings(isVisible: true),
             ),
             BarSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -159,7 +159,7 @@ class AreaChartAdvanced extends StatelessWidget {
           trackballBehavior: _trackball(),
           series: <CartesianSeries>[
             AreaSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
@@ -497,13 +497,13 @@ class StackedAreaChartAdvanced extends StatelessWidget {
           tooltipBehavior: _tooltip(),
           series: <CartesianSeries>[
             StackedAreaSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
             ),
             StackedAreaSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -525,14 +525,14 @@ class StackedBarChartAdvanced extends StatelessWidget {
           tooltipBehavior: _tooltip(),
           series: <CartesianSeries>[
             StackedBarSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
               dataLabelSettings: const DataLabelSettings(isVisible: true),
             ),
             StackedBarSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -554,14 +554,14 @@ class StackedColumnChartAdvanced extends StatelessWidget {
           tooltipBehavior: _tooltip(),
           series: <CartesianSeries>[
             StackedColumnSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
               dataLabelSettings: const DataLabelSettings(isVisible: true),
             ),
             StackedColumnSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -584,13 +584,13 @@ class StackedLineChartAdvanced extends StatelessWidget {
           trackballBehavior: _trackball(),
           series: <CartesianSeries>[
             StackedLineSeries<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
             ),
             StackedLineSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -612,13 +612,13 @@ class StackedArea100ChartAdvanced extends StatelessWidget {
           tooltipBehavior: _tooltip(),
           series: <CartesianSeries>[
             StackedArea100Series<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
             ),
             StackedArea100Series<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -640,14 +640,14 @@ class StackedBar100ChartAdvanced extends StatelessWidget {
           tooltipBehavior: _tooltip(),
           series: <CartesianSeries>[
             StackedBar100Series<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
               dataLabelSettings: const DataLabelSettings(isVisible: true),
             ),
             StackedBar100Series<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -669,14 +669,14 @@ class StackedColumn100ChartAdvanced extends StatelessWidget {
           tooltipBehavior: _tooltip(),
           series: <CartesianSeries>[
             StackedColumn100Series<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
               dataLabelSettings: const DataLabelSettings(isVisible: true),
             ),
             StackedColumn100Series<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -699,13 +699,13 @@ class StackedLine100ChartAdvanced extends StatelessWidget {
           trackballBehavior: _trackball(),
           series: <CartesianSeries>[
             StackedLine100Series<ChartData, String>(
-              name: 'Ventas',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
             ),
             StackedLine100Series<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
@@ -823,13 +823,13 @@ class CombinationChartAdvanced extends StatelessWidget {
           trackballBehavior: _trackball(),
           series: <CartesianSeries>[
             ColumnSeries<ChartData, String>(
-              name: 'Ventas reales',
+              name: 'Vivos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y,
             ),
             LineSeries<ChartData, String>(
-              name: 'Meta',
+              name: 'Muertos',
               dataSource: SampleData.monthlySales,
               xValueMapper: (d, _) => d.x,
               yValueMapper: (d, _) => d.y2,
