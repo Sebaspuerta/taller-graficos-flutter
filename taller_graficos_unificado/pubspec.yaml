@@ -1,0 +1,29 @@
+name: taller_graficos_unificado
+description: "Taller Librerías de Gráficos en Flutter — syncfusion_flutter_charts + fl_chart + graphic + flutter_echarts, 4x63 gráficas con datos de la API de Rick and Morty"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.7.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Las 4 librerías del taller:
+  syncfusion_flutter_charts: ^27.1.58
+  fl_chart: ^1.2.0
+  graphic: ^2.6.0
+  flutter_echarts: 2.5.0
+
+  # Para consumir la API de Rick and Morty:
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
